@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PollyGlot Language Translator</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="layout-container">
+      <header class="image-header">
+        <img src="assets/Pollyglot.png" alt="PollyGlot Header" />
+      </header>
+
+      <div class="card">
+        <label class="input-label" for="input-text">
+          Enter text to translate 👇
+        </label>
+        <textarea id="input-text" placeholder="How are you?"></textarea>
+
+        <label class="input-label">Select language 👇</label>
+        <div class="language-options">
+          <label class="lang">
+            <input type="radio" name="language" value="fr" checked />
+            <img src="assets/fr-flag.png" alt="French" />
+          </label>
+          <label class="lang">
+            <input type="radio" name="language" value="es" />
+            <img src="assets/sp-flag.png" alt="Spanish" />
+          </label>
+          <label class="lang">
+            <input type="radio" name="language" value="ja" />
+            <img src="assets/jpn-flag.png" alt="Japanese" />
+          </label>
+        </div>
+
+        <button id="translate-button">Translate</button>
+
+        <!-- 🆕 Translation output block -->
+        <div id="translation-output" class="output-area" style="display: none">
+          <p class="output-label">Translation 👇</p>
+          <div id="output-text"></div>
+        </div>
+      </div>
+
+      <!-- 🕓 Translation History Section -->
+      <div id="translation-history" class="history-section">
+        <h3>Translation History 🕓</h3>
+        <ul id="history-list"></ul>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,168 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f6f9;
+  margin: 0;
+  padding: 32px 16px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+.layout-container {
+  width: 100%;
+  max-width: 611px; /* Match image width */
+  margin: 0 auto;
+}
+
+/* Header Image */
+.image-header {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+}
+
+.image-header img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Card UI */
+.card {
+  background-color: #ffffff;
+  border: 1.5px solid #e0e0e0;
+  border-top: none;
+  border-radius: 0 0 20px 20px;
+  padding: 28px 24px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Form Elements */
+.input-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+textarea {
+  width: 100%;
+  height: 80px;
+  resize: none;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background-color: #f9fafb;
+  padding: 12px;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.language-options {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.lang {
+  border: 2px solid #dcdcdc;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.lang input[type="radio"] {
+  display: none;
+}
+
+.lang:has(input[type="radio"]:checked) {
+  border-color: #0078d4;
+  box-shadow: 0 0 4px rgba(0, 120, 212, 0.3);
+}
+
+.lang.selected {
+  border-color: #0078d4;
+  box-shadow: 0 0 4px rgba(0, 120, 212, 0.3);
+}
+
+.lang img {
+  width: 30px;
+  height: auto;
+  display: block;
+}
+
+.lang:hover {
+  border-color: #0078d4;
+}
+
+/* Button */
+#translate-button {
+  margin-top: 10px;
+  background-color: #0078d4;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px 0;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.2s ease;
+}
+
+#translate-button:hover {
+  background-color: #005fa3;
+}
+
+/* Output Area */
+.output-area {
+  margin-top: 20px;
+  padding: 16px;
+  background-color: #f1f7ff;
+  border: 1px solid #cfe4fc;
+  border-radius: 12px;
+  font-size: 14px;
+  color: #222;
+}
+
+.output-label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #0078d4;
+}
+
+/* Tranlation History */
+.history-section {
+  margin-top: 32px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.history-section h3 {
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: #0078d4;
+}
+
+#history-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#history-list li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #333;
+  background: #f9fafb;
+  padding: 10px;
+  border-radius: 10px;
+}
